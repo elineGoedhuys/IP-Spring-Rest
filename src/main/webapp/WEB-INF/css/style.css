@@ -1,0 +1,156 @@
+nav{
+    text-align: center;
+    border-style: none none solid none;
+    border-color: #C5EAF9;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    
+    
+}
+
+li{
+    float: left;
+    
+}
+
+a{
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    font-family: 'Helvetica','Verdana',sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border-radius: 5px 5px 5px 5px;
+  
+}
+
+li a{
+     background-color: #C5EAF9;
+     color: #00356B;
+}
+
+li a:hover{
+    background-color: white;
+}
+
+hr{
+    color: #C5EAF9;
+}
+
+img{
+    width: 80%;
+    border-radius: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+}
+
+h1{
+    text-align: center;
+    color: #00356B;
+    font-family: 'Helvetica','Verdana',sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+container{
+
+}
+
+table{
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+th{
+    font-family: 'Helvetica','Verdana',sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    padding: 8px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #C5EAF9;
+    border-color: #C5EAF9;
+    color:#00356B;
+    width: 20%;
+}
+
+td{
+    font-family: 'Helvetica','Verdana',sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    padding: 8px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: white;
+    border-color: white;
+    color:#00356B;
+    width: 20%;
+}
+
+input{
+    height: 30px; 
+    border-radius: 5px; 
+    border-color: #C5EAF9;
+    border-width: 2px;
+    border-style: solid;
+    background-color: white; 
+    color: #00356B; 
+    width: 80%; 
+    margin-left: 0%; 
+    margin-right: 0%; 
+    margin-top: 2%; 
+    font-family: 'Helvetica','Verdana',sans-serif;
+    font-size: 13px;
+
+}
+
+label{
+    font-family: 'Helvetica','Verdana',sans-serif;
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.save input{
+    width: 10%;
+    background-color:#C5EAF9;
+    color:#00356B;
+    padding-right: 0px;
+    font-family: 'Helvetica','Verdana',sans-serif;
+    font-size: 13px;
+    font-weight: 100;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+.add input{
+    width: 10%;
+    background-color:#C5EAF9;
+    color:#00356B;
+    padding-right: 0px;
+    font-family: 'Helvetica','Verdana',sans-serif;
+    font-size: 13px;
+    font-weight: 100;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
