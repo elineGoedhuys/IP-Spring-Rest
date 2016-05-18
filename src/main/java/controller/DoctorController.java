@@ -28,11 +28,11 @@ import service.DatabaseFacade;
  */
 @RestController
 @EnableWebMvc
-@RequestMapping(value="/doctors")
+@RequestMapping(value="/doctors1")
 public class DoctorController {
     
      @Autowired
-    private DatabaseFacade service;
+    DatabaseFacade service;
     
     @RequestMapping(method= RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Doctor> getDoctors(){

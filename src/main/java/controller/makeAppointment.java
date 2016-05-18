@@ -5,8 +5,8 @@
  */
 package controller;
 
-import domain.Appointment;
 import domain.Appointment1;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -25,15 +25,15 @@ import service.DatabaseFacade;
  */
 @RestController
 @EnableWebMvc
-@RequestMapping(value="/makeAppointment")
+@RequestMapping(value="/makeAppointment1")
 public class makeAppointment {
     
     @Autowired
-    private DatabaseFacade service;
+    DatabaseFacade service;
     
     @RequestMapping(method= RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
-    public Appointment1 makeAppointment(){
-        return new Appointment1();
+    public List<Appointment1> makeAppointment(){
+        return service.getAllAppointments();
     }
     
      @RequestMapping(method= RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
