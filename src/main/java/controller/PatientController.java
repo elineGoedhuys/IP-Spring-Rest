@@ -59,5 +59,10 @@ public class PatientController {
     public Patient getEditForm(@PathVariable int patientId){
         return service.getPatientOnId(patientId);
     }
+    
+      @RequestMapping(value = "/delete/{patientId}", method = RequestMethod.GET)
+    public void delete(@PathVariable("patientId") long patientId) {
+        service.deletePatient(patientId);
+    }
 
 }

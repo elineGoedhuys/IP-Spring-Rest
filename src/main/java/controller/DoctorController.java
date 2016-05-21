@@ -54,4 +54,9 @@ public class DoctorController {
     public Doctor getEditForm(@PathVariable int doctorId){
         return service.getDoctorOnId(doctorId);
     }
+    
+       @RequestMapping(value = "/delete/{doctorId}", method = RequestMethod.GET)
+    public void delete(@PathVariable("doctorId") long doctorId) {
+        service.deleteDocotor(doctorId);
+    }
 }
