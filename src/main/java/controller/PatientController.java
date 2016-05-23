@@ -42,14 +42,7 @@ public class PatientController {
         return service.getPatients();
     }
     
-   /* @RequestMapping(value="/new", method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
-    public ModelAndView getNewPatientForm(){
-        System.out.println("controller.PatientController.getNewPatientForm()");
-        return new ModelAndView("newPatient","patient",new Patient());
-    }*/
-  
-    
-    @RequestMapping(method= RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value="/new",method= RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void save(@RequestBody Patient patient){
         service.newPatient(patient);
       

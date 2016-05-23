@@ -38,13 +38,9 @@ public class DoctorController {
     public List<Doctor> getDoctors(){
         return service.getDoctors();
     }
+   
     
-    /**@RequestMapping(value="/new", method= RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Doctor getNewDoctor(){
-        return service.getDoctors();
-    }**/
-    
-     @RequestMapping(method= RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+     @RequestMapping(value="/new",method= RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void save(@RequestBody Doctor doctor){
         service.newDoctor(doctor);
         /*return "redirect:/doctors.htm";*/

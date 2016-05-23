@@ -35,7 +35,7 @@ public class makeAppointment {
     
 
      @RequestMapping(method= RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void save(@ModelAttribute("makeAppointment") @Valid Appointment1 appointment, BindingResult result){
+    public void save(@RequestBody Appointment1 appointment){
        service.makeAppointment(appointment);
     }
 }
