@@ -44,13 +44,18 @@ public class PatientController {
     
     @RequestMapping(value="/new",method= RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void save(@RequestBody Patient patient){
-        service.newPatient(patient);
+        if (patient.getId() > 0) {
+            service.updatePatient(patient);
+        } else {
+            service.newPatient(patient);
+        }
       
     }
     
-    @RequestMapping(value="/{patientId}", method= RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
-    public Patient getEditForm(@PathVariable int patientId){
-        return service.getPatientOnId(patientId);
+    @RequestMapping(value="/update/{patientId}", method= RequestMethod.POST,produces = MediaType.APPLICATION_JSON_VALUE)
+    public void update(@PathVariable("patientId") long patientId){
+        Patient patient = service.getPatientOnId(patientId);
+        service.updatePatient(patient);
     }
     
       @RequestMapping(value = "/delete/{patientId}", method = RequestMethod.GET)

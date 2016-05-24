@@ -42,7 +42,11 @@ public class DoctorController {
     
      @RequestMapping(value="/new",method= RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public void save(@RequestBody Doctor doctor){
+        if(doctor.getId() > 0){
+            service.updateDoctor(doctor);
+        }else{
         service.newDoctor(doctor);
+        }
         /*return "redirect:/doctors.htm";*/
     }
     
